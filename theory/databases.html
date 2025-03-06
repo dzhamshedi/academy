@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Базы данных - Dzham QA Labs</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/js/include.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div include-html="/components/header.html"></div>
+
+  <main>
+    <div class="content">
+      <h1>Базы данных</h1>
+
+      <div class="definition-block">
+        <p>
+          <strong>База данных (БД)</strong> — это организованная коллекция структурированных данных, хранящихся в компьютерной системе. БД позволяет эффективно хранить, управлять и получать информацию.
+        </p>
+      </div>
+
+      <h2>Типы баз данных</h2>
+      
+      <div class="db-types">
+        <div class="db-block">
+          <h3>Реляционные БД</h3>
+          <p>Данные организованы в виде таблиц (отношений) со строками и столбцами. Между таблицами устанавливаются связи.</p>
+          <p><strong>Примеры:</strong></p>
+          <ul>
+            <li><strong>PostgreSQL:</strong> Открытая СУБД с богатым функционалом и поддержкой JSON</li>
+            <li><strong>MySQL:</strong> Популярная БД для веб-приложений</li>
+            <li><strong>Oracle:</strong> Корпоративная СУБД с высокой надежностью</li>
+            <li><strong>MS SQL Server:</strong> СУБД от Microsoft с интеграцией с их продуктами</li>
+          </ul>
+          <p><strong>Преимущества:</strong></p>
+          <ul>
+            <li>Обеспечение целостности данных</li>
+            <li>Поддержка транзакций (ACID)</li>
+            <li>Мощный язык запросов SQL</li>
+            <li>Четкая структура данных</li>
+          </ul>
+          <p><strong>Недостатки:</strong></p>
+          <ul>
+            <li>Сложность горизонтального масштабирования</li>
+            <li>Фиксированная схема данных</li>
+            <li>Проблемы с хранением сложных иерархических структур</li>
+          </ul>
+        </div>
+
+        <div class="db-block">
+          <h3>Нереляционные БД (NoSQL)</h3>
+          <p>Различные подходы к хранению данных без использования табличной структуры.</p>
+          <p><strong>Основные типы:</strong></p>
+          <ul>
+            <li><strong>Документные (MongoDB):</strong> Хранение данных в виде документов JSON/BSON</li>
+            <li><strong>Ключ-значение (Redis):</strong> Простое хранилище пар ключ-значение</li>
+            <li><strong>Колоночные (Cassandra):</strong> Оптимизированы для хранения и анализа больших наборов данных</li>
+            <li><strong>Графовые (Neo4j):</strong> Для работы со связанными данными в виде графов</li>
+          </ul>
+          <p><strong>Преимущества:</strong></p>
+          <ul>
+            <li>Гибкая схема данных</li>
+            <li>Хорошая горизонтальная масштабируемость</li>
+            <li>Высокая производительность для определенных задач</li>
+            <li>Удобство работы со сложными структурами</li>
+          </ul>
+          <p><strong>Недостатки:</strong></p>
+          <ul>
+            <li>Отсутствие строгой согласованности данных</li>
+            <li>Ограниченная поддержка транзакций</li>
+            <li>Сложность поддержки связей между данными</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>Системы управления базами данных (СУБД)</h2>
+      <div class="definition-block">
+        <p>
+          <strong>СУБД</strong> — это программное обеспечение, которое позволяет создавать, хранить, обновлять и администрировать базы данных. СУБД обеспечивает контроль доступа к данным, целостность данных, управление транзакциями и восстановление после сбоев.
+        </p>
+      </div>
+
+      <div class="tool-block">
+        <h3>Инструменты для работы с БД</h3>
+        <div class="tools-grid">
+          <div>
+            <h4>DBeaver</h4>
+            <p>Универсальный инструмент для работы с различными БД:</p>
+            <ul>
+              <li>Поддержка множества СУБД</li>
+              <li>Визуальный редактор данных</li>
+              <li>Построение ER-диаграмм</li>
+              <li>Экспорт/импорт данных</li>
+            </ul>
+            <p><a href="https://dbeaver.io/" target="_blank">Официальный сайт DBeaver</a></p>
+          </div>
+          <div>
+            <h4>DataGrip</h4>
+            <p>IDE для БД от JetBrains:</p>
+            <ul>
+              <li>Умное автодополнение кода</li>
+              <li>Продвинутый редактор SQL</li>
+              <li>Визуализация планов запросов</li>
+              <li>Интеграция с другими продуктами JetBrains</li>
+            </ul>
+            <p><a href="https://www.jetbrains.com/datagrip/" target="_blank">Официальный сайт DataGrip</a></p>
+          </div>
+        </div>
+      </div>
+
+      <h2>Типы данных в PostgreSQL</h2>
+      <div class="data-types-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Категория</th>
+              <th>Тип данных</th>
+              <th>Описание</th>
+              <th>Пример</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="3">Числовые</td>
+              <td>integer</td>
+              <td>Целое число (4 байта)</td>
+              <td>42</td>
+            </tr>
+            <tr>
+              <td>numeric</td>
+              <td>Точное число с десятичными знаками</td>
+              <td>123.45</td>
+            </tr>
+            <tr>
+              <td>real</td>
+              <td>Число с плавающей точкой</td>
+              <td>123.456</td>
+            </tr>
+            <tr>
+              <td rowspan="3">Символьные</td>
+              <td>char(n)</td>
+              <td>Строка фиксированной длины</td>
+              <td>'text'</td>
+            </tr>
+            <tr>
+              <td>varchar(n)</td>
+              <td>Строка переменной длины</td>
+              <td>'variable text'</td>
+            </tr>
+            <tr>
+              <td>text</td>
+              <td>Строка неограниченной длины</td>
+              <td>'long text'</td>
+            </tr>
+            <tr>
+              <td rowspan="3">Дата/время</td>
+              <td>date</td>
+              <td>Дата</td>
+              <td>'2024-03-21'</td>
+            </tr>
+            <tr>
+              <td>time</td>
+              <td>Время</td>
+              <td>'15:30:00'</td>
+            </tr>
+            <tr>
+              <td>timestamp</td>
+              <td>Дата и время</td>
+              <td>'2024-03-21 15:30:00'</td>
+            </tr>
+            <tr>
+              <td rowspan="2">Логические</td>
+              <td>boolean</td>
+              <td>Логическое значение</td>
+              <td>true, false</td>
+            </tr>
+            <tr>
+              <td>null</td>
+              <td>Отсутствие значения</td>
+              <td>NULL</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>SQL команды</h2>
+      
+      <div class="sql-commands">
+        <div class="command-block">
+          <h3>DDL (Data Definition Language)</h3>
+          <p>Команды для определения и изменения структуры базы данных:</p>
+          <ul>
+            <li><strong>CREATE</strong> - создание объектов БД (таблиц, индексов и т.д.)</li>
+            <li><strong>ALTER</strong> - изменение существующих объектов</li>
+            <li><strong>DROP</strong> - удаление объектов</li>
+            <li><strong>TRUNCATE</strong> - очистка таблицы</li>
+          </ul>
+        </div>
+
+        <div class="command-block">
+          <h3>DML (Data Manipulation Language)</h3>
+          <p>Команды для работы с данными:</p>
+          <ul>
+            <li><strong>SELECT</strong> - выборка данных</li>
+            <li><strong>INSERT</strong> - добавление новых записей</li>
+            <li><strong>UPDATE</strong> - изменение существующих записей</li>
+            <li><strong>DELETE</strong> - удаление записей</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>Шаблоны SQL запросов</h2>
+      
+      <div class="sql-examples">
+        <div class="example-block">
+          <h3>Базовая выборка всех полей</h3>
+          <p>Получаем все данные из таблицы сотрудников:</p>
+          <pre><code>SELECT *
+FROM employees;</code></pre>
+        </div>
+
+        <div class="example-block">
+          <h3>Выборка с условием WHERE</h3>
+          <p>Получаем имя, фамилию и зарплату сотрудников из отдела №10:</p>
+          <pre><code>SELECT first_name, last_name, salary
+FROM employees
+WHERE department_id = 10;</code></pre>
+        </div>
+
+        <div class="example-block">
+          <h3>Использование оператора OR</h3>
+          <p>Получаем товары, которые либо относятся к категории 'Electronics', либо стоят дороже 1000:</p>
+          <pre><code>SELECT product_name, price
+FROM products
+WHERE category = 'Electronics' 
+   OR price > 1000;</code></pre>
+        </div>
+
+        <div class="example-block">
+          <h3>Использование оператора AND</h3>
+          <p>Получаем заказы в статусе 'Pending' с суммой более 500:</p>
+          <pre><code>SELECT order_id, order_date, total_amount
+FROM orders
+WHERE status = 'Pending'
+  AND total_amount > 500;</code></pre>
+        </div>
+
+        <div class="example-block">
+          <h3>Использование BETWEEN</h3>
+          <p>Получаем товары со стоимостью от 100 до 500 включительно:</p>
+          <pre><code>SELECT product_name, price
+FROM products
+WHERE price BETWEEN 100 AND 500;</code></pre>
+        </div>
+
+        <div class="example-block">
+          <h3>Группировка с GROUP BY</h3>
+          <p>Получаем количество товаров и их среднюю цену по категориям:</p>
+          <pre><code>SELECT category,
+       COUNT(*) as products_count,
+       AVG(price) as avg_price
+FROM products
+GROUP BY category;</code></pre>
+        </div>
+
+        <div class="example-block">
+          <h3>Сортировка с ORDER BY</h3>
+          <p>Получаем список сотрудников, отсортированный по дате найма в обратном порядке (сначала новые):</p>
+          <pre><code>SELECT first_name, last_name, hire_date
+FROM employees
+ORDER BY hire_date DESC;</code></pre>
+        </div>
+
+        <div class="example-block">
+          <h3>Использование DISTINCT</h3>
+          <p>Получаем список уникальных комбинаций отделов и должностей (без дубликатов):</p>
+          <pre><code>SELECT DISTINCT department_id, job_title
+FROM employees;</code></pre>
+        </div>
+
+        <div class="example-block">
+          <h3>Объединение таблиц с JOIN</h3>
+          <p>Получаем список сотрудников с названиями их отделов:</p>
+          <pre><code>SELECT e.first_name, e.last_name, d.department_name
+FROM employees e
+JOIN departments d ON e.department_id = d.department_id;</code></pre>
+        </div>
+
+        <div class="example-block">
+          <h3>Подзапрос в SELECT</h3>
+          <p>Получаем список сотрудников, чья зарплата выше средней по компании:</p>
+          <pre><code>SELECT first_name, last_name, salary
+FROM employees
+WHERE salary > (
+    SELECT AVG(salary)
+    FROM employees
+);</code></pre>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div include-html="/components/footer.html"></div>
+</body>
+</html>

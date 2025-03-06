@@ -1,0 +1,1121 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #ffffff;
+    color: #2d3748;
+    font-size: 16px;
+    line-height: 1.6;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Шапка */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.project-name {
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.project-name a {
+    color: #2d3748;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.project-name a:hover {
+    color: #4299e1;
+}
+
+.contact-link {
+    position: relative;
+}
+
+.contact-link a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: #4299e1;
+    transition: all 0.2s;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-link a:hover {
+    background-color: #3182ce;
+    transform: translateY(-1px);
+}
+
+.telegram-icon {
+    width: 16px;
+    height: 16px;
+    color: currentColor;
+}
+
+/* Боковое меню */
+.sidebar {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 70px);
+    background-color: #f7fafc;
+    padding: 24px 0;
+    overflow-y: auto;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin: 8px 16px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px 20px;
+    color: #4a5568;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: all 0.2s;
+    font-weight: 500;
+}
+
+.sidebar a:hover {
+    background-color: #edf2f7;
+    color: #4299e1;
+}
+
+/* Основной контент */
+main {
+    flex: 1;
+    margin-left: 250px;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 90px 40px 40px;
+}
+
+.content h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.content h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2d3748;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    line-height: 1.3;
+}
+
+.content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2d3748;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #4a5568;
+    margin-bottom: 16px;
+}
+
+/* Стили для страницы "Обо мне" */
+.content ul {
+    margin: 16px 0;
+    padding-left: 24px;
+    list-style-type: disc;
+}
+
+.content ul li {
+    font-size: 16px;
+    margin: 12px 0;
+    line-height: 1.7;
+    color: #4a5568;
+}
+
+.content a {
+    color: #4299e1;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.content a:hover {
+    color: #3182ce;
+    text-decoration: underline;
+}
+
+.content strong {
+    color: #2d3748;
+    font-weight: 600;
+}
+
+/* Стили для сетки теории */
+.theory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.theory-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 24px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.theory-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-color: #4299e1;
+    text-decoration: none !important;
+}
+
+.theory-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    line-height: 1.4;
+}
+
+.theory-card p {
+    font-size: 15px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 1920px) {
+    .content {
+        max-width: 900px;
+    }
+}
+
+@media (max-width: 1366px) {
+    .content {
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 12px 0;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    .content {
+        padding: 24px;
+        max-width: 100%;
+    }
+
+    .header-content {
+        padding: 0 16px;
+    }
+
+    .project-name {
+        font-size: 24px;
+    }
+
+    .theory-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+/* Стили для страницы "в разработке" */
+.in-development {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f7fafc;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.in-development svg {
+    color: #4299e1;
+    margin-bottom: 16px;
+}
+
+.in-development p {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 8px;
+}
+
+.in-development span {
+    font-size: 16px;
+    color: #718096;
+}
+
+/* Стили для блоков с примерами */
+.example-block {
+    background-color: #f7fafc;
+    border-left: 4px solid #4299e1;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 24px 0;
+}
+
+.example-block h3 {
+    color: #2d3748;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+/* Стили для блока с определением */
+.definition-block {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 24px;
+    margin: 24px 0;
+}
+
+.definition-block p {
+    margin-top: 0;
+}
+
+.definition-block ul {
+    margin-bottom: 0;
+}
+
+.definition-block strong {
+    color: #2d3748;
+    font-weight: 600;
+}
+
+/* Стили для блоков с моделями */
+.model-block {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 24px;
+    margin: 24px 0;
+}
+
+.pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 16px;
+}
+
+.pros h4 {
+    color: #38a169;
+}
+
+.cons h4 {
+    color: #e53e3e;
+}
+
+.highlight-block {
+    background-color: #ebf8ff;
+    border-left: 4px solid #4299e1;
+    padding: 16px 24px;
+    margin: 24px 0;
+    border-radius: 4px;
+}
+
+.highlight-block p {
+    margin: 0;
+    color: #2c5282;
+}
+
+@media (max-width: 768px) {
+    .pros-cons {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+/* Стили для блока с цитатой */
+.quote-block {
+    background-color: #f8fafc;
+    border-left: 4px solid #718096;
+    padding: 20px 24px;
+    margin: 32px 0;
+    font-style: italic;
+}
+
+.quote-block p {
+    margin: 0;
+    color: #4a5568;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.quote-block strong {
+    font-style: normal;
+    color: #2d3748;
+}
+
+/* Стили для блоков с ролями */
+.role-block {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 24px;
+    margin: 24px 0;
+}
+
+.role-block h3 {
+    color: #2d3748;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+/* Стили для блоков специализаций */
+.specialization-block {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 24px;
+    margin: 24px 0;
+}
+
+.specialization-block h3 {
+    color: #2d3748;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.specialization-block strong {
+    color: #2d3748;
+}
+
+/* Стили для блоков с инструментами */
+.tool-block {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 24px;
+    margin: 24px 0;
+}
+
+.tool-block h2 {
+    color: #2d3748;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.tool-block p {
+    color: #4a5568;
+    margin-bottom: 16px;
+}
+
+.tool-block ul {
+    margin-bottom: 16px;
+}
+
+.tool-block a {
+    color: #4299e1;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.tool-block a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для футера */
+footer {
+    background-color: #f7fafc;
+    padding: 16px 0;
+    margin-top: auto;
+    border-top: 1px solid #e2e8f0;
+    position: relative;
+    z-index: 100;
+}
+
+.footer-content {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.copyright {
+    color: #718096;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 0 16px;
+    }
+}
+
+/* Стили для блоков с базами данных */
+.db-types {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin: 24px 0;
+}
+
+.db-block {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+/* Стили для таблицы типов данных */
+.data-types-table {
+    margin: 24px 0;
+    overflow-x: auto;
+}
+
+.data-types-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+.data-types-table th,
+.data-types-table td {
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+.data-types-table th {
+    background-color: #f7fafc;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.data-types-table td {
+    color: #4a5568;
+}
+
+@media (max-width: 768px) {
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Стили для пирамиды тестирования */
+.pyramid-block {
+    text-align: center;
+    margin: 32px 0;
+}
+
+.pyramid-image {
+    max-width: 600px;
+    margin-bottom: 16px;
+}
+
+/* Стили для уровней тестирования */
+.testing-levels {
+    display: grid;
+    gap: 24px;
+    margin: 24px 0;
+}
+
+.level-block {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.level-details {
+    margin-top: 16px;
+}
+
+/* Стили для этапов тестирования */
+.testing-stages {
+    display: grid;
+    gap: 24px;
+    margin: 24px 0;
+}
+
+.stage-block {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.acceptance-stages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.stage {
+    background-color: #f8fafc;
+    border-radius: 6px;
+    padding: 16px;
+}
+
+.stage h4 {
+    color: #2d3748;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+    .acceptance-stages {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Стили для SQL команд */
+.sql-commands {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 24px 0;
+}
+
+.command-block {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+/* Стили для примеров SQL */
+.sql-examples {
+    display: grid;
+    gap: 24px;
+    margin: 24px 0;
+}
+
+.example-block {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.example-block pre {
+    background-color: #f8fafc;
+    border-radius: 6px;
+    padding: 16px;
+    overflow-x: auto;
+}
+
+.example-block code {
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 14px;
+    color: #2d3748;
+}
+
+@media (max-width: 768px) {
+    .sql-commands {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Стили для имитации DevTools */
+.devtools-interface {
+    margin: 32px 0;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f8fafc;
+}
+
+.devtools-tabs {
+    display: flex;
+    background-color: #f1f5f9;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.tab {
+    padding: 12px 24px;
+    font-size: 14px;
+    color: #64748b;
+    cursor: pointer;
+    border-right: 1px solid #e2e8f0;
+    transition: all 0.2s;
+}
+
+.tab:hover {
+    background-color: #e2e8f0;
+    color: #2d3748;
+}
+
+.tab.active {
+    background-color: #ffffff;
+    color: #2d3748;
+    font-weight: 500;
+}
+
+.tab-content {
+    display: none;
+    padding: 24px;
+    background-color: #ffffff;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.testing-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 16px;
+}
+
+.feature-block {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.feature-block h4 {
+    margin: 0 0 12px 0;
+    color: #2d3748;
+    font-size: 16px;
+}
+
+.feature-block ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.feature-block li {
+    margin: 8px 0;
+    color: #4a5568;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .testing-features {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Стили для тестовой площадки */
+.testing-playground {
+    margin: 32px 0;
+    padding: 24px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+.playground-content {
+    display: none;
+}
+
+.playground-content.active {
+    display: block;
+}
+
+/* Стили для формы */
+.form-examples {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #4a5568;
+    font-weight: 500;
+}
+
+.masked-input,
+.text-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+}
+
+.masked-input:focus,
+.text-input:focus {
+    outline: none;
+    border-color: #4299e1;
+}
+
+.button-group {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.disabled-button {
+    padding: 10px 20px;
+    background-color: #e2e8f0;
+    color: #a0aec0;
+    border: none;
+    border-radius: 6px;
+    cursor: not-allowed;
+}
+
+.truncate-button {
+    padding: 10px 20px;
+    background-color: #4299e1;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.2s;
+}
+
+.truncate-button:hover {
+    background-color: #3182ce;
+}
+
+/* Обновленные стили для тестовой площадки */
+.playground-title {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* Обновленные стили для инпутов с масками */
+.masked-input {
+    letter-spacing: 0.5px;
+    font-family: monospace;
+}
+
+/* Добавляем стили для поля с паролем */
+input[type="password"] {
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+
+/* Стили для вкладки Performance */
+.tab.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Обновляем стили для консоли на светлые */
+.console-example {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    color: #2d3748;
+}
+
+.code-block {
+    margin-bottom: 20px;
+}
+
+.code-block pre {
+    background: #f7fafc;
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto;
+    border: 1px solid #e2e8f0;
+}
+
+.code-block code {
+    color: #4a5568;
+    font-family: monospace;
+}
+
+/* Обновляем стили для уровней логирования */
+.log-levels {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.log-level {
+    padding: 12px;
+    background: #f7fafc;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+}
+
+.log-level code {
+    color: #4a5568;
+    font-family: monospace;
+    background: #edf2f7;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Обновляем цвета сообщений консоли */
+.log-message { color: #2d3748; }
+.error-message { color: #e53e3e; }
+.warning-message { color: #d69e2e; }
+.info-message { color: #3182ce; }
+
+/* Стили для Network */
+.network-example {
+    padding: 20px;
+}
+
+.request-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.request-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.request-button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.request-button[data-method="GET"] { background-color: #4dabf7; }
+.request-button[data-method="POST"] { background-color: #51cf66; }
+.request-button[data-method="PUT"] { background-color: #ffd43b; }
+
+.endpoint {
+    font-family: monospace;
+    color: #495057;
+}
+
+/* Стили для Application */
+.storage-example {
+    padding: 20px;
+}
+
+.storage-controls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.storage-block {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.storage-block input {
+    width: calc(100% - 16px); /* учитываем padding */
+    padding: 8px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.storage-block button {
+    width: 100%;
+    padding: 8px;
+    background: #4dabf7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.storage-block .check-button {
+    background: #4299e1;
+}
+
+.storage-block button:hover {
+    opacity: 0.9;
+}
+
+.storage-hint {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+}
+
+/* Обновленные стили для Network */
+.request-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: center;
+}
+
+.request-check {
+    display: flex;
+    gap: 8px;
+    flex: 1;
+}
+
+.check-input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.check-input.correct {
+    border-color: #48bb78;
+    background-color: #f0fff4;
+}
+
+.check-input.incorrect {
+    border-color: #f56565;
+    background-color: #fff5f5;
+}
+
+.check-button {
+    padding: 8px 16px;
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.check-button:hover {
+    background-color: #3182ce;
+}
+
+/* Стили для секции стека вызова */
+.stack-trace-section {
+    margin-top: 40px;
+}
+
+.stack-trace-section > h4 {
+    color: #2d3748;
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.stack-trace-section > p {
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+/* Обновляем стили для примера стека */
+.stack-trace-example {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f7fafc;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    color: #2d3748;
+}
+
+.error-stack {
+    background: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+    color: #e53e3e;
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+.stack-explanation {
+    margin-top: 20px;
+    color: #2d3748;
+}
+
+.stack-explanation h4 {
+    color: #2d3748;
+    margin-bottom: 10px;
+}
+
+.stack-explanation ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.stack-explanation li {
+    margin: 5px 0;
+    color: #4a5568;
+}
+
+/* Стили для тестового прямоугольника */
+.test-rectangle {
+    width: 200px;
+    height: 100px;
+    background-color: #e2e8f0;
+    border-radius: 4px;
+    margin: 10px 0;
+}

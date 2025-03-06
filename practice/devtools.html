@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chrome DevTools - Тестировщик на связи - Academy</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/js/include.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div include-html="/components/header.html"></div>
+
+  <main>
+    <div class="content">
+      <h1>Тестирование в DevTools</h1>
+
+      <div class="devtools-interface">
+        <div class="devtools-tabs">
+          <div class="tab active" data-tab="elements">Elements</div>
+          <div class="tab" data-tab="console">Console</div>
+          <div class="tab" data-tab="network">Network</div>
+          <div class="tab disabled" data-tab="performance" title="Пока не реализовано">Performance</div>
+          <div class="tab" data-tab="application">Application</div>
+        </div>
+
+        <div class="tab-content active" id="elements-content">
+          <h3>Elements - инструменты тестирования верстки</h3>
+          <div class="testing-features">
+            <div class="feature-block">
+              <h4>Проверка стилей</h4>
+              <ul>
+                <li>Шрифты и их характеристики</li>
+                <li>Цветовая палитра и контраст</li>
+                <li>Размеры элементов</li>
+                <li>Отступы и позиционирование</li>
+              </ul>
+            </div>
+            <div class="feature-block">
+              <h4>Анализ верстки</h4>
+              <ul>
+                <li>Структура DOM-дерева</li>
+                <li>Проверка переполнения контентом</li>
+                <li>Адаптивность и отзывчивость</li>
+                <li>Корректность HTML-разметки</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="console-content">
+          <h3>Console - отладка и мониторинг ошибок</h3>
+          <div class="testing-features">
+            <div class="feature-block">
+              <h4>Отслеживание ошибок</h4>
+              <ul>
+                <li>JavaScript ошибки и исключения</li>
+                <li>Проблемы загрузки ресурсов</li>
+                <li>Ошибки безопасности</li>
+                <li>Предупреждения и уведомления</li>
+              </ul>
+            </div>
+            <div class="feature-block">
+              <h4>Тестирование функциональности</h4>
+              <ul>
+                <li>Проверка работы JavaScript</li>
+                <li>Отладка событий и обработчиков</li>
+                <li>Мониторинг состояния приложения</li>
+                <li>Тестирование API-вызовов</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="network-content">
+          <h3>Network - анализ сетевых запросов</h3>
+          <div class="testing-features">
+            <div class="feature-block">
+              <h4>Проверка запросов</h4>
+              <ul>
+                <li>Статус-коды ответов</li>
+                <li>Заголовки запросов и ответов</li>
+                <li>Параметры и тела запросов</li>
+                <li>Cookies и авторизация</li>
+              </ul>
+            </div>
+            <div class="feature-block">
+              <h4>Анализ производительности</h4>
+              <ul>
+                <li>Время загрузки ресурсов</li>
+                <li>Размер передаваемых данных</li>
+                <li>Кэширование и оптимизация</li>
+                <li>Последовательность загрузки</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="performance-content">
+          <h3>Performance - оценка производительности</h3>
+          <div class="testing-features">
+            <div class="feature-block">
+              <h4>Анализ времени загрузки</h4>
+              <ul>
+                <li>Метрики загрузки страницы</li>
+                <li>Профилирование JavaScript</li>
+                <li>Анализ рендеринга</li>
+                <li>Поиск блокирующих ресурсов</li>
+              </ul>
+            </div>
+            <div class="feature-block">
+              <h4>Оптимизация</h4>
+              <ul>
+                <li>Выявление утечек памяти</li>
+                <li>Анализ использования CPU</li>
+                <li>Оценка времени отклика</li>
+                <li>Рекомендации по улучшению</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="application-content">
+          <h3>Application - тестирование хранилищ</h3>
+          <div class="testing-features">
+            <div class="feature-block">
+              <h4>Проверка данных</h4>
+              <ul>
+                <li>Local Storage и Session Storage</li>
+                <li>Cookies и их параметры</li>
+                <li>IndexedDB и Web SQL</li>
+                <li>Cache Storage</li>
+              </ul>
+            </div>
+            <div class="feature-block">
+              <h4>Управление состоянием</h4>
+              <ul>
+                <li>Очистка хранилищ</li>
+                <li>Эмуляция офлайн-режима</li>
+                <li>Service Workers</li>
+                <li>Manifest и PWA</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testing-playground">
+        <h2 class="playground-title">Песочница</h2>
+        
+        <div class="playground-content active" id="elements-playground">
+          <div class="form-examples">
+            <div class="input-group">
+              <label for="phone">Телефон: что не так с вводом ?</label>
+              <input 
+                type="tel" 
+                id="phone" 
+                placeholder="+7(9__)___-__-__"
+                maxlength="14"
+                data-mask="+7 (900) 000-00-00"
+                class="masked-input"
+              >
+            </div>
+
+            <div class="input-group">
+              <label for="passport">Серия и номер паспорта: маска работает ?</label>
+              <input 
+                type="text" 
+                id="passport" 
+                placeholder="__ __ ______"
+                maxlength="11"
+                data-mask="00 00000000"
+                class="masked-input"
+              >
+            </div>
+
+            <div class="input-group">
+              <label for="lastname">Фамилия: какая длина ввода ?</label>
+              <input 
+                type="text" 
+                id="lastname" 
+                placeholder="Введите фамилию не более 20 символов"
+                maxlength="10"
+                class="text-input"
+              >
+            </div>
+
+            <div class="input-group">
+              <label for="password">Пароль: посмотри пароль</label>
+              <input 
+                type="password" 
+                id="password" 
+                value="password"
+                class="text-input"
+              >
+            </div>
+
+            <!-- Добавляем тестовый прямоугольник -->
+            <div class="input-group">
+              <label>Какой у меня размер и цвет?</label>
+              <div class="test-rectangle"></div>
+            </div>
+
+            <div class="button-group">
+              <button disabled class="disabled-button">
+                Разблокируй меня
+              </button>
+
+              <button class="truncate-button">
+                Проверь длину
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="playground-content" id="console-playground">
+          <div class="console-example">
+            <div class="code-block">
+              <p>// Уровни логирования в консоли:</p>
+              <div class="log-levels">
+                <div class="log-level">
+                  <code>console.log()</code> - обычные информационные сообщения
+                  <div class="log-message">Используется для вывода общей информации</div>
+                </div>
+                <div class="log-level">
+                  <code>console.info()</code> - информационные сообщения со значком "i"
+                  <div class="info-message">Подчеркивает важную информацию о работе приложения</div>
+                </div>
+                <div class="log-level">
+                  <code>console.warn()</code> - предупреждения
+                  <div class="warning-message">Сообщает о потенциальных проблемах</div>
+                </div>
+                <div class="log-level">
+                  <code>console.error()</code> - ошибки
+                  <div class="error-message">Указывает на критические проблемы в работе</div>
+                </div>
+              </div>
+
+              <p>// Попробуйте выполнить этот код в консоли:</p>
+              <pre><code>console.log('Привет, мир!');
+console.error('Это пример ошибки');
+console.warn('Это предупреждение');
+console.info('Это информационное сообщение');</code></pre>
+            </div>
+
+            <div class="console-output">
+              <p>Ожидаемый вывод в консоли:</p>
+              <div class="log-message">Привет, мир!</div>
+              <div class="error-message">Это пример ошибки</div>
+              <div class="warning-message">Это предупреждение</div>
+              <div class="info-message">Это информационное сообщение</div>
+            </div>
+
+            <div class="stack-trace-section">
+              <h4>Что такое стек вызова?</h4>
+              <p>
+                Стек вызова (stack trace) - это последовательность вызовов функций, которая привела к ошибке. 
+                Это как "след из хлебных крошек", который показывает путь от места возникновения ошибки до точки входа в программу.
+                Читается снизу вверх, от самого первого вызова до места возникновения ошибки.
+              </p>
+
+              <div class="stack-trace-example">
+                <h4>Пример стека вызова</h4>
+                <pre class="error-stack"><code>Uncaught TypeError: Cannot read properties of undefined (reading 'name')
+    at getUserName (script.js:15)
+    at displayUserInfo (script.js:10)
+    at handleClick (script.js:5)
+    at HTMLButtonElement.onclick (index.html:25)</code></pre>
+                
+                <div class="stack-explanation">
+                  <p>Как читать стек вызова:</p>
+                  <ul>
+                    <li>Верхняя строка показывает тип ошибки и где именно она произошла</li>
+                    <li>Последующие строки показывают цепочку вызовов функций (at ИмяФункции)</li>
+                    <li>В скобках указан файл и номер строки, где произошел вызов</li>
+                  </ul>
+                  
+                  <p>
+                    <strong>Нужно ли тестировщику разбираться в стеке вызова?</strong> Да, это важный навык! 
+                    Умение читать stack trace помогает:
+                  </p>
+                  <ul>
+                    <li>Точнее локализовать проблему</li>
+                    <li>Предоставить разработчикам более полезную информацию в баг-репорте</li>
+                    <li>Быстрее понять, связаны ли разные ошибки с одной и той же проблемой</li>
+                    <li>Отличить ошибки фронтенда от проблем с бэкендом</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="playground-content" id="network-playground">
+          <div class="network-example">
+            <h3>Тестовые запросы</h3>
+            <div class="request-list">
+              <div class="request-item">
+                <button class="request-button" data-method="GET">GET запрос</button>
+                <div class="request-check">
+                  <input 
+                    type="text" 
+                    class="check-input" 
+                    data-expected="200"
+                    placeholder="Какой status code будет в ответе?"
+                  >
+                  <button class="check-button">Проверить</button>
+                </div>
+              </div>
+              <div class="request-item">
+                <button class="request-button" data-method="POST">POST запрос</button>
+                <div class="request-check">
+                  <input 
+                    type="text" 
+                    class="check-input" 
+                    data-expected="test@example.com"
+                    placeholder="Какой email в теле запроса?"
+                  >
+                  <button class="check-button">Проверить</button>
+                </div>
+              </div>
+              <div class="request-item">
+                <button class="request-button" data-method="PUT">PUT запрос</button>
+                <div class="request-check">
+                  <input 
+                    type="text" 
+                    class="check-input" 
+                    data-expected="{}"
+                    placeholder="Какой ответ вернет сервер?"
+                  >
+                  <button class="check-button">Проверить</button>
+                </div>
+              </div>
+            </div>
+            <p class="network-hint">Откройте вкладку Network в DevTools, отправьте запрос и найдите ответ на вопрос</p>
+          </div>
+        </div>
+
+        <div class="playground-content" id="application-playground">
+          <div class="storage-example">
+            <div class="storage-controls">
+              <div class="storage-block">
+                <input type="text" id="localStorageKey" placeholder="Ключ">
+                <input type="text" id="localStorageValue" placeholder="Значение">
+                <button onclick="setLocalStorage()">Сохранить</button>
+                <input 
+                  type="text" 
+                  class="check-input" 
+                  data-expected="local storage"
+                  placeholder="Куда сохранилось значение?"
+                >
+                <button class="check-button">Проверить</button>
+              </div>
+
+              <div class="storage-block">
+                <input type="text" id="sessionStorageKey" placeholder="Ключ">
+                <input type="text" id="sessionStorageValue" placeholder="Значение">
+                <button onclick="setSessionStorage()">Сохранить</button>
+                <input 
+                  type="text" 
+                  class="check-input" 
+                  data-expected="session storage"
+                  placeholder="Куда сохранилось значение?"
+                >
+                <button class="check-button">Проверить</button>
+              </div>
+
+              <div class="storage-block">
+                <input type="text" id="cookieName" placeholder="Ключ">
+                <input type="text" id="cookieValue" placeholder="Значение">
+                <button onclick="setCookie()">Сохранить</button>
+                <input 
+                  type="text" 
+                  class="check-input" 
+                  data-expected="cookie"
+                  placeholder="Куда сохранилось значение?"
+                >
+                <button class="check-button">Проверить</button>
+              </div>
+            </div>
+            <p class="storage-hint">Проверьте значения во вкладке Application в DevTools</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div include-html="/components/footer.html"></div>
+
+  <script src="/js/devtools.js"></script>
+</body>
+</html>

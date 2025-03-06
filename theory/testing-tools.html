@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Инструменты тестирования - Dzham QA Labs</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/js/include.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div include-html="/components/header.html"></div>
+
+  <main>
+    <div class="content">
+      <h1>Инструменты тестирования</h1>
+
+      <div class="tool-block">
+        <h2>DevTools (Инструменты разработчика)</h2>
+        <p>
+          Встроенные в браузер инструменты для отладки и анализа веб-приложений. Позволяют:
+        </p>
+        <ul>
+          <li>Исследовать HTML/CSS структуру страницы</li>
+          <li>Отслеживать сетевые запросы</li>
+          <li>Анализировать производительность</li>
+          <li>Эмулировать мобильные устройства</li>
+          <li>Отлаживать JavaScript</li>
+        </ul>
+        <p><a href="https://developer.chrome.com/docs/devtools/" target="_blank">Документация Chrome DevTools</a></p>
+      </div>
+
+      <div class="tool-block">
+        <h2>Postman</h2>
+        <p>
+          Популярный инструмент для тестирования API. Функциональность:
+        </p>
+        <ul>
+          <li>Отправка HTTP-запросов</li>
+          <li>Автоматизация тестирования API</li>
+          <li>Создание коллекций запросов</li>
+          <li>Генерация документации</li>
+          <li>Совместная работа над API</li>
+        </ul>
+        <p><a href="https://www.postman.com/" target="_blank">Официальный сайт Postman</a></p>
+      </div>
+
+      <div class="tool-block">
+        <h2>ApiDog</h2>
+        <p>
+          Комплексная платформа для разработки и тестирования API, объединяющая функционал нескольких инструментов:
+        </p>
+        <ul>
+          <li>Дизайн и документирование API в визуальном редакторе</li>
+          <li>Тестирование и отладка запросов</li>
+          <li>Автоматическая генерация тестов из спецификации API</li>
+          <li>Встроенный mock-сервер</li>
+          <li>Совместная работа над API в команде</li>
+          <li>Поддержка CI/CD и автоматизации</li>
+        </ul>
+        <div class="highlight-block">
+          <p>
+            ApiDog объединяет функциональность Postman, Swagger Editor, Swagger UI, Stoplight, ReadMe, JMeter и других инструментов в одном приложении.
+          </p>
+        </div>
+        <p><a href="https://apidog.com/" target="_blank">Официальный сайт ApiDog</a></p>
+      </div>
+
+      <div class="tool-block">
+        <h2>Swagger (OpenAPI)</h2>
+        <p>
+          Инструмент для документирования и тестирования REST API:
+        </p>
+        <ul>
+          <li>Интерактивная документация API</li>
+          <li>Возможность выполнять запросы прямо из документации</li>
+          <li>Автогенерация клиентских библиотек</li>
+          <li>Стандартизация описания API</li>
+        </ul>
+        <p><a href="https://swagger.io/" target="_blank">Официальный сайт Swagger</a></p>
+      </div>
+
+      <div class="tool-block">
+        <h2>Git</h2>
+        <p>
+          Система контроля версий, необходимая для:
+        </p>
+        <ul>
+          <li>Отслеживания изменений в коде</li>
+          <li>Работы с разными версиями приложения</li>
+          <li>Совместной работы над проектом</li>
+          <li>Ведения истории изменений</li>
+        </ul>
+        <p><a href="https://git-scm.com/" target="_blank">Официальный сайт Git</a></p>
+      </div>
+
+      <div class="tool-block">
+        <h2>DBeaver</h2>
+        <p>
+          Универсальный инструмент для работы с базами данных:
+        </p>
+        <ul>
+          <li>Подключение к различным типам БД</li>
+          <li>Выполнение SQL-запросов</li>
+          <li>Просмотр и редактирование данных</li>
+          <li>Создание ER-диаграмм</li>
+        </ul>
+        <p><a href="https://dbeaver.io/" target="_blank">Официальный сайт DBeaver</a></p>
+      </div>
+
+      <div class="tool-block">
+        <h2>Charles Proxy</h2>
+        <p>
+          Прокси-сервер для анализа сетевого трафика:
+        </p>
+        <ul>
+          <li>Перехват и анализ HTTP/HTTPS запросов</li>
+          <li>Модификация запросов и ответов</li>
+          <li>Эмуляция медленного соединения</li>
+          <li>Отладка мобильных приложений</li>
+        </ul>
+        <p><a href="https://www.charlesproxy.com/" target="_blank">Официальный сайт Charles</a></p>
+      </div>
+
+      <div class="tool-block">
+        <h2>Fiddler</h2>
+        <p>
+          Прокси-сервер для отладки веб-трафика:
+        </p>
+        <ul>
+          <li>Перехват и анализ HTTP/HTTPS трафика</li>
+          <li>Мощный скриптовый движок для автоматизации</li>
+          <li>Удобный интерфейс для анализа запросов</li>
+          <li>Поддержка веб-сокетов</li>
+        </ul>
+        <p><a href="https://www.telerik.com/fiddler" target="_blank">Официальный сайт Fiddler</a></p>
+      </div>
+
+      <div class="tool-block">
+        <h2>Proxyman</h2>
+        <p>
+          Современный прокси для macOS:
+        </p>
+        <ul>
+          <li>Нативное приложение для macOS</li>
+          <li>Поддержка HTTP/HTTPS/SOCKS</li>
+          <li>Встроенный сертификат для iOS</li>
+          <li>Удобный интерфейс и быстрая работа</li>
+        </ul>
+        <p><a href="https://proxyman.io/" target="_blank">Официальный сайт Proxyman</a></p>
+      </div>
+
+      <div class="tool-block">
+        <h2>Wireshark</h2>
+        <p>
+          Анализатор сетевого трафика:
+        </p>
+        <ul>
+          <li>Захват пакетов на низком уровне</li>
+          <li>Поддержка множества протоколов</li>
+          <li>Глубокий анализ сетевых проблем</li>
+          <li>Мощные фильтры для поиска</li>
+        </ul>
+        <p><a href="https://www.wireshark.org/" target="_blank">Официальный сайт Wireshark</a></p>
+      </div>
+
+      <div class="tool-block">
+        <h2>Android Studio</h2>
+        <p>
+          IDE для разработки и тестирования Android-приложений:
+        </p>
+        <ul>
+          <li>Эмуляция Android-устройств</li>
+          <li>Отладка приложений</li>
+          <li>Анализ логов</li>
+          <li>Профилирование производительности</li>
+        </ul>
+        <p><a href="https://developer.android.com/studio" target="_blank">Официальный сайт Android Studio</a></p>
+      </div>
+
+      <div class="tool-block">
+        <h2>Xcode</h2>
+        <p>
+          IDE для разработки и тестирования iOS-приложений:
+        </p>
+        <ul>
+          <li>Симуляция iOS-устройств</li>
+          <li>Отладка приложений</li>
+          <li>Анализ производительности</li>
+          <li>Автоматизация UI-тестов</li>
+        </ul>
+        <p><a href="https://developer.apple.com/xcode/" target="_blank">Официальный сайт Xcode</a></p>
+      </div>
+
+      <div class="tool-block">
+        <h2>VS Code / IntelliJ IDEA</h2>
+        <p>
+          Популярные среды разработки:
+        </p>
+        <ul>
+          <li>Написание автотестов</li>
+          <li>Работа с системой контроля версий</li>
+          <li>Отладка кода</li>
+          <li>Множество полезных расширений</li>
+        </ul>
+        <p>
+          <a href="https://code.visualstudio.com/" target="_blank">Официальный сайт VS Code</a><br>
+          <a href="https://www.jetbrains.com/idea/" target="_blank">Официальный сайт IntelliJ IDEA</a>
+        </p>
+      </div>
+
+      <div class="tool-block">
+        <h2>Bash</h2>
+        <p>
+          Командная оболочка Unix для:
+        </p>
+        <ul>
+          <li>Автоматизации рутинных задач</li>
+          <li>Работы с файловой системой</li>
+          <li>Запуска тестов из командной строки</li>
+          <li>Управления процессами</li>
+        </ul>
+        <p><a href="https://www.gnu.org/software/bash/" target="_blank">Официальный сайт Bash</a></p>
+      </div>
+
+      <div class="tool-block">
+        <h2>JMeter</h2>
+        <p>
+          Инструмент для нагрузочного тестирования:
+        </p>
+        <ul>
+          <li>Создание тестовых сценариев нагрузки</li>
+          <li>Анализ производительности</li>
+          <li>Тестирование различных протоколов</li>
+          <li>Генерация отчетов</li>
+        </ul>
+        <p><a href="https://jmeter.apache.org/" target="_blank">Официальный сайт JMeter</a></p>
+      </div>
+
+      <div class="tool-block">
+        <h2>Программы для создания скриншотов</h2>
+        <p>
+          Инструменты для создания и редактирования скриншотов:
+        </p>
+        <ul>
+          <li>Создание скриншотов для баг-репортов</li>
+          <li>Добавление аннотаций и пометок</li>
+          <li>Запись видео с экрана</li>
+          <li>Быстрое сохранение и отправка</li>
+        </ul>
+        <p><a href="https://disk.yandex.ru/d/Q5F4GWBSn5xhkw" target="_blank">Подборка программ для создания скриншотов</a></p>
+      </div>
+
+      <div class="tool-block">
+        <h2>BrowserStack</h2>
+        <p>
+          Облачная платформа для тестирования:
+        </p>
+        <ul>
+          <li>Доступ к реальным мобильным устройствам</li>
+          <li>Тестирование в различных браузерах и ОС</li>
+          <li>Интеграция с инструментами автоматизации</li>
+          <li>Параллельное выполнение тестов</li>
+          <li>Встроенные инструменты отладки</li>
+        </ul>
+        <p><a href="https://www.browserstack.com/" target="_blank">Официальный сайт BrowserStack</a></p>
+      </div>
+    </div>
+  </main>
+  <div include-html="/components/footer.html"></div>
+</body>
+</html>
